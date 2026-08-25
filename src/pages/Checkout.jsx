@@ -2,6 +2,7 @@ import { formatMoney } from "../utils/money";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import dayjs from "dayjs";
+import { useNavigate } from "react-router";
 
 export const Checkout = ({ cart, loadCart }) => {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
@@ -43,6 +44,13 @@ export const Checkout = ({ cart, loadCart }) => {
   const deleteCartItem = async(cartItem) =>{
     await axios.delete(`http://localhost:3000/api/cart-items/${cartItem.productId}`);
     await loadCart()
+  }
+
+  const navigate = useNavigate();
+  const handleOrder = async() =>{
+    await axios.post("http://localhost:3000/api/orders")
+    await loadCart
+    navigate("/orders")
   }
 
   return (
@@ -188,7 +196,7 @@ export const Checkout = ({ cart, loadCart }) => {
                   <p>Oder total: </p>
                   <p>{formatMoney(paymentSummary.totalCostCents)}</p>
                 </div>
-                <button className=" bg-green-600 m-4 py-2 rounded-sm hover:bg-green-800 hover:text-white ">
+                <button onClick={handleOrder} className=" bg-green-600 m-4 py-2 rounded-sm hover:bg-green-800 hover:text-white ">
                   Place your order
                 </button>
               </div>
