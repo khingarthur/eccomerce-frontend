@@ -25,29 +25,27 @@ export const Header = ({ selectedCategory, onCategorySelect }) => {
             </span>
           </button>
         </form>
-
       </div>
 
       <div className="flex justify-around pt-2 items-center w-full max-w-md  mx-auto text-sm">
-      {categories.map((category) => {
-        return(
-        <button
-          key={category}
-          type="button"
-          onClick={() => onCategorySelect(category)}
-          aria-pressed={selectedCategory === category}
-          className={`px-2 text-sm font-semibold shadow rounded-xl border border-[#14B8A6] ${
-            selectedCategory === category
-              ? "bg-[#14B8A6] text-white"
-              : "text-[#1E293B] hover:text-[#14B8A6]"
-          }`}
-        >
-          {category}
-        </button>
-        )
-      })}
+        {categories.map((category) => {
+          return (
+            <button
+              key={category}
+              type="button"
+              onClick={() => onCategorySelect(category)}
+              aria-pressed={selectedCategory === category}
+              className={`px-2 text-sm font-semibold shadow rounded-xl border border-[#14B8A6] ${
+                selectedCategory === category
+                  ? "bg-[#14B8A6] text-white"
+                  : "text-[#1E293B] hover:text-[#14B8A6]"
+              }`}
+            >
+              {category}
+            </button>
+          );
+        })}
       </div>
-
     </header>
   );
 };

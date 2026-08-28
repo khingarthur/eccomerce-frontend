@@ -1,7 +1,6 @@
 import { NavLink } from "react-router";
 import { PageMeta } from "../utils/PageMeta";
 
-
 export const Tracking = () => {
   return (
     <div>
@@ -32,25 +31,24 @@ export const Tracking = () => {
 
           <div className="flex flex-col">
             <div>
-                <button>Order Placed</button>
-                <p></p>
+              <button>Order Placed</button>
+              <p></p>
             </div>
 
             <div>
-                <button>Order Confirmed</button>
-                <p></p>    
+              <button>Order Confirmed</button>
+              <p></p>
             </div>
 
             <div>
-                <button>Shipped</button>
-                <p></p>
+              <button>Shipped</button>
+              <p></p>
             </div>
 
             <div>
-                <button>Delivered</button>
-                <p></p>
+              <button>Delivered</button>
+              <p></p>
             </div>
-
           </div>
         </div>
       </main>

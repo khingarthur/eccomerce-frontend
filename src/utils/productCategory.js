@@ -15,5 +15,7 @@ export function matchesCategory(product, category) {
     return /cook|toaster|kettle|blender|cooker|microwave|kitchen/.test(value);
   }
 
-  return !/shoe|sneaker|trainer|boot|sandal|sport|ball|athletic|basketball|football|fitness|gym|cook|toaster|kettle|blender|cooker|microwave|kitchen/.test(value);
+  return !/shoe|sneaker|trainer|boot|sandal|sport|ball|athletic|basketball|football|fitness|gym|cook|toaster|kettle|blender|cooker|microwave|kitchen/.test(
+    value,
+  );
 }

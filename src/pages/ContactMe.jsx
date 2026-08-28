@@ -20,9 +20,9 @@ export const ContactMe = () => {
             </p>
             <h1 className="mt-2 text-3xl font-bold">Frederick Arthur</h1>
             <p className="mt-4 leading-7 text-[#E2E8F0]">
-              I am open to business opportunities and collaborations with
-              people who want to build useful, thoughtful, and reliable
-              software projects.
+              I am open to business opportunities and collaborations with people
+              who want to build useful, thoughtful, and reliable software
+              projects.
             </p>
           </div>
 
@@ -68,9 +68,7 @@ export const ContactMe = () => {
               </span>
               <span>
                 <span className="block text-sm text-[#64748B]">LinkedIn</span>
-                <span className="font-semibold">
-                  linkedin.com/in/arthur03
-                </span>
+                <span className="font-semibold">linkedin.com/in/arthur03</span>
               </span>
             </a>
           </div>

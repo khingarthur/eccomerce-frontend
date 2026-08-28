@@ -74,9 +74,7 @@ export const Categories = ({ products, isLoading, addToCart }) => {
                         className="h-24 w-full shrink-0 bg-white object-contain p-2"
                       />
                       <div className="flex min-h-0 flex-1 flex-col justify-between p-2">
-                        <h3 className="line-clamp-1 text-sm">
-                          {product.name}
-                        </h3>
+                        <h3 className="line-clamp-1 text-sm">{product.name}</h3>
                         <div className="mt-1 flex items-center justify-between gap-2">
                           <p className="text-sm font-bold">
                             ${formatMoney(product.priceCents)}
