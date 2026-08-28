@@ -79,9 +79,6 @@ export const Orders = ({ deviceId, addToCart }) => {
         />
         <Header2 heading={heading} />
         <main className="bg-white text-[#1E293B] py-12 px-4 flex flex-col items-center justify-center min-h-screen">
-          <p className="mb-6 rounded-lg border border-[#FDE68A] bg-[#FFFBEB] px-4 py-3 text-center text-sm font-semibold text-[#92400E]">
-            We do not do refunds. Your wallet has already started missing you 🙃
-          </p>
           <h1 className="pl-3 md:pl-0 mb-6 text-2xl font-bold tracking-tight">
             You Have No Orders
           </h1>
