@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 import { formatMoney } from "../utils/money";
 import { useNavigate } from "react-router";
 import { Header2 } from "../components/Header2";
+import { PageMeta } from "../utils/PageMeta";
 
 export const Orders = ({ deviceId, addToCart }) => {
   const heading = "Your Orders";
@@ -57,7 +58,10 @@ export const Orders = ({ deviceId, addToCart }) => {
   if (isLoading === true) {
     return (
       <>
-        <title>KC | Orders</title>
+        <PageMeta
+          title="Orders | Assorted Happy Shopping"
+          description="View your completed orders and delivery details."
+        />
         <Header2 heading={heading} />
         <main className="bg-white text-[#1E293B] py-12 px-4 flex flex-col items-center justify-center min-h-screen">
           <div className="w-8 h-8 border-4 border-gray-200 border-t-[#1E293B] rounded-full animate-spin"></div>
@@ -69,7 +73,10 @@ export const Orders = ({ deviceId, addToCart }) => {
   if (orders && orders.length === 0) {
     return (
       <>
-        <title>KC | Orders</title>
+        <PageMeta
+          title="Orders | Assorted Happy Shopping"
+          description="View your completed orders and delivery details."
+        />
         <Header2 heading={heading} />
         <main className="bg-white text-[#1E293B] py-12 px-4 flex flex-col items-center justify-center min-h-screen">
           <h1 className="pl-3 md:pl-0 mb-6 text-2xl font-bold tracking-tight">
@@ -90,7 +97,10 @@ export const Orders = ({ deviceId, addToCart }) => {
 
   return (
     <>
-      <title>KC | Orders</title>
+      <PageMeta
+        title="Orders | Assorted Happy Shopping"
+        description="View your completed orders and delivery details."
+      />
       <Header2 heading={heading} />
       <main className="font-manrope w-full bg-white text-[#1E293B] pt-20 pb-20 px-2 md:px-16 min-h-screen">
         {orders.map((order) => {

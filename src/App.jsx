@@ -12,6 +12,8 @@ const Orders = lazy(() => import("./pages/Orders").then((module) => ({ default: 
 const Tracking = lazy(() => import("./pages/Tracking").then((module) => ({ default: module.Tracking })));
 const ContactMe = lazy(() => import("./pages/ContactMe").then((module) => ({ default: module.ContactMe })));
 const Categories = lazy(() => import("./pages/Categories").then((module) => ({ default: module.Categories })));
+const Account = lazy(() => import("./pages/Account").then((module) => ({ default: module.Account })));
+const NotFound = lazy(() => import("./pages/NotFound").then((module) => ({ default: module.NotFound })));
 
 const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:3000"}/api`;
 
@@ -89,6 +91,8 @@ function App() {
         />
         <Route path="/tracking" element={<Tracking />} />
         <Route path="/contactme" element={<ContactMe />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Navigation cart={cart} />

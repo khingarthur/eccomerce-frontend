@@ -1,5 +1,6 @@
 import { Header } from "../components/Header";
 import { Product } from "../components/Product";
+import { PageMeta } from "../utils/PageMeta";
 
 export const HomePage = ({ products, isLoading, addToCart }) => {
   if (isLoading === true) {
@@ -15,7 +16,10 @@ export const HomePage = ({ products, isLoading, addToCart }) => {
 
   return (
     <>
-      <title>KOBBYCommerce</title>
+      <PageMeta
+        title="Assorted Happy Shopping | Home"
+        description="Shop clothing, shoes, sports products, and home appliances."
+      />
 
       <Header />
       <main className="font-manrope mt-28 grid grid-cols-2 md:grid-cols-4 gap-3 bg-white text-[#1E293B] w-full min-h-screen mb-25 px-2 md:px-10">

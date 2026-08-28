@@ -1,4 +1,5 @@
 import { Header2 } from "../components/Header2";
+import { PageMeta } from "../utils/PageMeta";
 
 export const ContactMe = () => {
   const navigateTo = "/";
@@ -6,6 +7,10 @@ export const ContactMe = () => {
 
   return (
     <>
+      <PageMeta
+        title="Contact Frederick Arthur"
+        description="Contact Frederick Arthur for business opportunities and project collaboration."
+      />
       <Header2 navigateTo={navigateTo} icon={icon} />
       <main className="min-h-screen bg-white px-5 pb-28 pt-28 text-[#1E293B]">
         <section className="mx-auto max-w-xl">

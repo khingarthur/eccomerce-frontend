@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router";
 import { Header2 } from "../components/Header2";
+import { PageMeta } from "../utils/PageMeta";
 
 const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:3000"}/api`;
 const PAYSTACK_PUBLIC_KEY = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
@@ -222,7 +223,10 @@ export const Checkout = ({
     <>
       <Header2 heading={heading} />
       <div className="font-manrope bg-white text-[#1E293B] pb-20 min-h-screen">
-        <title>KC|Checkout</title>
+        <PageMeta
+          title="Checkout | Assorted Happy Shopping"
+          description="Review your cart and securely complete your order."
+        />
 
         {/* second header */}
         <div className="flex-1 flex justify-center mt-4">
@@ -416,7 +420,7 @@ export const Checkout = ({
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center justify-between border-t border-slate-200 pt-4">
+                <div className="mt-4 flex items-centfer justify-between border-t border-slate-200 pt-4">
                   <span className="font-semibold text-slate-900">
                     Order total
                   </span>
@@ -461,7 +465,7 @@ export const Checkout = ({
                       : "Loading payment..."
                     : isPaying
                       ? "Confirming payment..."
-                      : "Pay with Paystack"}
+                      : "Place Order"}
                 </button>
               </div>
             )}

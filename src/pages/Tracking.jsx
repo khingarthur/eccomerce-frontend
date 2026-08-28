@@ -1,9 +1,14 @@
 import { NavLink } from "react-router";
+import { PageMeta } from "../utils/PageMeta";
 
 
 export const Tracking = () => {
   return (
     <div>
+      <PageMeta
+        title="Track Order | Assorted Happy Shopping"
+        description="Track the delivery progress of your order."
+      />
       <head className="flex justify-between items-center">
         <NavLink to="/orders" className="">
           <span className=" material-symbols-outlined ">arrow</span>

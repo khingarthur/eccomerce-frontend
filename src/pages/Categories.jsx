@@ -1,5 +1,6 @@
 import { Header2 } from "../components/Header2";
 import { formatMoney } from "../utils/money";
+import { PageMeta } from "../utils/PageMeta";
 
 const categoryNames = ["Clothing", "Home Appliances", "Sports"];
 
@@ -40,7 +41,10 @@ export const Categories = ({ products, isLoading, addToCart }) => {
 
   return (
     <>
-      <title>KOBBYCommerce | Categories</title>
+      <PageMeta
+        title="Categories | Assorted Happy Shopping"
+        description="Browse products by clothing, sports, and home appliance categories."
+      />
       <Header2 heading="Categories" />
       <main className="min-h-screen bg-white px-4 pb-24 pt-24 text-[#1E293B]">
         <div className="mx-auto max-w-5xl space-y-8">

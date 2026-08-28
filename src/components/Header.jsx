@@ -4,8 +4,11 @@ export const Header = () => {
   return (
     <header className="font-manrope z-50 flex flex-col gap-2 fixed top-0 px-2 rounded w-full bg-white py-4  ">
       <div className="w-full flex gap-2 max-w-md items-center justify-center mx-auto">
-        {/* <div className="lobster-two-italic">Ks</div> */}
-        
+        <img
+          src="/logo.png"
+          alt="Assorted Happy Shopping"
+          className="h-10 w-14 shrink-0 object-contain"
+        />
         <form className="flex h-8 text-sm w-full">
           <input
             name="search"
