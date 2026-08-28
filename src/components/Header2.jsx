@@ -19,14 +19,7 @@ export const Header2 = ({
         >
           arrow_back
         </span>
-        <div className="flex min-w-0 items-center gap-2">
-          <img
-            src="/logo.png"
-            alt="Assorted Happy Shopping"
-            className="h-9 w-12 shrink-0 object-contain"
-          />
-          <h1 className="truncate text-xl font-bold">{heading}</h1>
-        </div>
+        <h1 className="truncate text-xl font-bold">{heading}</h1>
         <NavLink to={navigateTo}>
           <span className="material-symbols-outlined shadow-[#0F766E] shadow-sm rounded-lg py-1 px-3">
             {icon}

@@ -4,17 +4,19 @@ export const Header = ({ selectedCategory, onCategorySelect }) => {
   return (
     <header className="font-manrope z-50 flex flex-col gap-2 fixed top-0 px-2 rounded w-full bg-white py-4  ">
       <div className="mx-auto flex w-full max-w-md flex-col items-center gap-2">
-        <img
-          src="/logo.png"
-          alt="Assorted Happy Shopping"
-          className="h-16 w-32 shrink-0 object-contain"
-        />
         <form className="flex h-8 text-sm w-full">
-          <input
-            name="search"
-            className="w-full rounded-xl rounded-r-none bg-white shadow px-4 text-sm font-medium text-[#1E293B] border border-[#14B8A6] focus:outline-none"
-            placeholder="Search"
-          />
+          <div className="flex min-w-0 flex-1 items-center rounded-l-xl border border-r-0 border-[#14B8A6] bg-white shadow">
+            <img
+              src="/logo.png"
+              alt="Assorted Happy Shopping"
+              className="ml-2 h-6 w-8 shrink-0 object-contain"
+            />
+            <input
+              name="search"
+              className="min-w-0 w-full bg-transparent px-2 text-sm font-medium text-[#1E293B] outline-none"
+              placeholder="Search products..."
+            />
+          </div>
 
           <button
             type="submit"
