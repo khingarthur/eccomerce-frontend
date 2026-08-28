@@ -1,4 +1,4 @@
-export const Header = () => {
+export const Header = ({ selectedCategory, onCategorySelect }) => {
   const categories = ["All", "Clothing", "Shoes", "Sport", "cook"];
 
   return (
@@ -33,7 +33,14 @@ export const Header = () => {
         return(
         <button
           key={category}
-          className="text-[#1E293B] shadow px-2 text-sm font-semibold hover:text-[#14B8A6] rounded-xl border border-[#14B8A6]"
+          type="button"
+          onClick={() => onCategorySelect(category)}
+          aria-pressed={selectedCategory === category}
+          className={`px-2 text-sm font-semibold shadow rounded-xl border border-[#14B8A6] ${
+            selectedCategory === category
+              ? "bg-[#14B8A6] text-white"
+              : "text-[#1E293B] hover:text-[#14B8A6]"
+          }`}
         >
           {category}
         </button>
