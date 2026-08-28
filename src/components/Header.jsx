@@ -3,11 +3,11 @@ export const Header = ({ selectedCategory, onCategorySelect }) => {
 
   return (
     <header className="font-manrope z-50 flex flex-col gap-2 fixed top-0 px-2 rounded w-full bg-white py-4  ">
-      <div className="w-full flex gap-2 max-w-md items-center justify-center mx-auto">
+      <div className="mx-auto flex w-full max-w-md flex-col items-center gap-2">
         <img
           src="/logo.png"
           alt="Assorted Happy Shopping"
-          className="h-10 w-14 shrink-0 object-contain"
+          className="h-16 w-32 shrink-0 object-contain"
         />
         <form className="flex h-8 text-sm w-full">
           <input
