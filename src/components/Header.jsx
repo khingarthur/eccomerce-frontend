@@ -1,52 +1,43 @@
-import { NavLink } from "react-router";
-
-export const Header = ({ cart }) => {
-
-  let totalQuantity = 0;
-  cart.map((item) => {
-    totalQuantity += item.quantity;
-  });
+export const Header = () => {
+  const categories = ["All", "Clothing", "Shoes", "Sport", "cook"];
 
   return (
-    <nav className=" flex justify-between items-center flex-wrap gap-y-4 bg-green-600 py-2 px-4 md:px-6">
-      <NavLink
-        to="/"
-        className="text-amber-50 hover:text-amber-400 font-bold md:text-xl"
-      >
-        KOBBYCommerce
-      </NavLink>
-
-      <div className="w-full flex md:flex-1 order-last justify-center md:order-0">
-        <form className="flex h-12 w-full max-w-2xl px-4">
+    <header className="font-manrope z-50 flex flex-col gap-2 fixed top-0 px-2 rounded w-full bg-white py-4  ">
+      <div className="w-full flex gap-2 max-w-md items-center justify-center mx-auto">
+        {/* <div className="lobster-two-italic">Ks</div> */}
+        
+        <form className="flex h-8 text-sm w-full">
           <input
             name="search"
-            className="bg-amber-50 rounded-l-md px-4 w-full focus:outline-none font-bold"
+            className="w-full rounded-xl rounded-r-none bg-white shadow px-4 text-sm font-medium text-[#1E293B] border border-[#14B8A6] focus:outline-none"
             placeholder="Search"
           />
 
           <button
             type="submit"
-            className="bg-amber-200 px-2 rounded-r-md hover:bg-amber-300"
+            className="rounded-r-xl bg-[#14B8A6] px-2 text-white hover:bg-[#0F766E]"
           >
-            <span className="material-symbols-outlined align-middle">
+            <span className="material-symbols-outlined align-middle ">
               arrow_right_alt
             </span>
           </button>
         </form>
+
       </div>
 
-      <div className="flex gap-4 text-amber-50 md:text-xl font-bold">
-        <NavLink className="hover:text-amber-400" to="/orders">
-          Orders
-        </NavLink>
-        <div className="flex hover:text-amber-400">
-          <NavLink to="/checkout">
-            <sup className="bg-amber-600 p-0.5 rounded-lg">{totalQuantity}</sup>
-            <span className="material-symbols-outlined">shopping_cart</span>
-          </NavLink>
-          <NavLink to="/checkout">Cart</NavLink>
-        </div>
+      <div className="flex justify-around pt-2 items-center w-full max-w-md  mx-auto text-sm">
+      {categories.map((category) => {
+        return(
+        <button
+          key={category}
+          className="text-[#1E293B] shadow px-2 text-sm font-semibold hover:text-[#14B8A6] rounded-xl border border-[#14B8A6]"
+        >
+          {category}
+        </button>
+        )
+      })}
       </div>
-    </nav>
+
+    </header>
   );
 };
