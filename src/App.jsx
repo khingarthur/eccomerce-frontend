@@ -1,16 +1,17 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import { Routes, Route } from "react-router";
-import { Checkout } from "./pages/Checkout";
-import { Orders } from "./pages/Orders";
 import { Navigation } from "./components/Navigation";
-import { Tracking } from "./pages/Tracking";
-import { ContactMe } from "./pages/ContactMe";
-import { Categories } from "./pages/Categories";
 import axios from "axios";
 import { useCart } from "./hooks/useCart";
+
+const Checkout = lazy(() => import("./pages/Checkout").then((module) => ({ default: module.Checkout })));
+const Orders = lazy(() => import("./pages/Orders").then((module) => ({ default: module.Orders })));
+const Tracking = lazy(() => import("./pages/Tracking").then((module) => ({ default: module.Tracking })));
+const ContactMe = lazy(() => import("./pages/ContactMe").then((module) => ({ default: module.ContactMe })));
+const Categories = lazy(() => import("./pages/Categories").then((module) => ({ default: module.Categories })));
 
 const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:3000"}/api`;
 
@@ -30,7 +31,9 @@ function App() {
   useEffect(() => {
     const loadProducts = async () => {
       setIsProductsLoading(true);
-      const response = await axios.get(`${API_URL}/products`);
+      const response = await axios.get(`${API_URL}/products`, {
+        headers: { "Cache-Control": "max-age=300" },
+      });
       setProducts(response.data);
       setIsProductsLoading(false);
     };
@@ -40,7 +43,14 @@ function App() {
 
   return (
     <>
-      <Routes>
+      <Suspense
+        fallback={
+          <main className="flex min-h-screen items-center justify-center bg-white">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-200 border-t-[#1E293B]" />
+          </main>
+        }
+      >
+        <Routes>
         <Route
           index
           element={
@@ -79,7 +89,8 @@ function App() {
         />
         <Route path="/tracking" element={<Tracking />} />
         <Route path="/contactme" element={<ContactMe />} />
-      </Routes>
+        </Routes>
+      </Suspense>
       <Navigation cart={cart} />
     </>
   );

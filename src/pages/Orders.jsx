@@ -140,7 +140,9 @@ export const Orders = ({ deviceId, addToCart }) => {
                         <div key={product.productId} className="flex gap-3 ">
                           <img
                             src={product.product.image}
-                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            alt={product.product.name}
                             className="w-24 sm:w-28 rounded-md object-cover shrink-0"
                           />
 
@@ -224,7 +226,9 @@ export const Orders = ({ deviceId, addToCart }) => {
                         <div key={product.productId} className="flex gap-8">
                           <img
                             src={product.product.image}
-                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            alt={product.product.name}
                             className="w-30 rounded-md"
                           />
                           {/* Product details */}

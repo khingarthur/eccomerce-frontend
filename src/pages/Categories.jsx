@@ -64,6 +64,8 @@ export const Categories = ({ products, isLoading, addToCart }) => {
                     >
                       <img
                         src={product.image}
+                        loading="lazy"
+                        decoding="async"
                         alt={product.name}
                         className="h-24 w-full shrink-0 bg-white object-contain p-2"
                       />

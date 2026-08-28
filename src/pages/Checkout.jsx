@@ -56,6 +56,7 @@ export const Checkout = ({
       setIsLoading(true);
       const response = await axios.get(
         `${API_URL}/delivery-options?expand=estimatedDeliveryTime`,
+        { headers: { "Cache-Control": "max-age=60" } },
       );
       setDeliveryOptions(response.data);
 
@@ -286,7 +287,9 @@ export const Checkout = ({
                           <img
                             className="w-36 rounded"
                             src={cartItem.product.image}
-                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            alt={cartItem.product.name}
                           />
                         </div>
                         <div className="text-white flex flex-col text-sm">

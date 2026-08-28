@@ -33,8 +33,10 @@ export const Product = ({ product, addToCart }) => {
     <div className="font-manrope bg-[#F4F7F9] text-[#1E293B] transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl rounded-xl overflow-hidden border border-[#DCE8EA]">
       <img
         src={product.image}
+        loading="lazy"
+        decoding="async"
         className="h-40 w-full p-1 object-contain mix-blend-multiply"
-        alt=""
+        alt={product.name}
       />
       <div className="pl-2 mt-2">
         <p className="line-clamp-1 text-sm font-semibold">{product.name}</p>
@@ -42,6 +44,9 @@ export const Product = ({ product, addToCart }) => {
         <div className="text-center text-sm flex  items-center">
           <img
             src={`images/ratings/rating-${product.rating.stars * 10}.png`}
+            loading="lazy"
+            decoding="async"
+            alt={`${product.rating.stars} star rating`}
             className="w-15"
           />
 
