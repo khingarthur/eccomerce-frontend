@@ -2,7 +2,7 @@ export const Header = ({ selectedCategory, onCategorySelect }) => {
   const categories = ["All", "Clothing", "Shoes", "Sport", "cook"];
 
   return (
-    <header className="font-manrope z-50 flex flex-col gap-2 fixed top-0 px-2 rounded w-full bg-white py-4  ">
+    <header className="shop-header font-manrope z-50 flex flex-col gap-2 fixed top-0 px-2 rounded w-full bg-white py-4  ">
       <div className="mx-auto flex w-full max-w-md flex-col items-center gap-2">
         <form className="flex h-8 text-sm w-full">
           <div className="flex min-w-0 flex-1 items-center rounded-l-xl border border-r-0 border-[#14B8A6] bg-white shadow">

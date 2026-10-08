@@ -9,7 +9,7 @@ export const Header2 = ({
   const navigate = useNavigate();
 
   return (
-    <header className="font-manrope font-bold text-[#1E293B] fixed top-0 left-0 w-full bg-white  z-50 ">
+    <header className="page-header font-manrope font-bold text-[#1E293B] fixed top-0 left-0 w-full bg-white  z-50 ">
       <div className="flex justify-between items-center p-4 shadow-md rounded m-2 mx-2">
         <span
           className="material-symbols-outlined shadow-sm rounded-lg py-1 px-3 shadow-[#0F766E]"

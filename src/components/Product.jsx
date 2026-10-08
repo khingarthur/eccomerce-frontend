@@ -30,7 +30,7 @@ export const Product = ({ product, addToCart }) => {
 
   // show is added implementation
   return (
-    <div className="font-manrope bg-[#F4F7F9] text-[#1E293B] transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl rounded-xl overflow-hidden border border-[#DCE8EA]">
+    <div className="product-card font-manrope bg-[#F4F7F9] text-[#1E293B] transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl rounded-xl overflow-hidden border border-[#DCE8EA]">
       <img
         src={product.image}
         loading="lazy"

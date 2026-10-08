@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import { Header2 } from "../components/Header2";
 import { PageMeta } from "../utils/PageMeta";
 
+
 export const Orders = ({ deviceId, addToCart }) => {
   const heading = "Your Orders";
 

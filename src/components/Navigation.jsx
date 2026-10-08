@@ -7,7 +7,7 @@ export const Navigation = ({ cart }) => {
   });
 
   return (
-    <nav className="font-manrope fixed z-50 mt-8 bottom-0 py-2 left-0 w-full flex justify-between bg-white px-4 border-b rounded-b-2xl border-[#1E293B]">
+    <nav className="desktop-navigation font-manrope fixed z-50 mt-8 bottom-0 py-2 left-0 w-full flex justify-between bg-white px-4 border-b rounded-b-2xl border-[#1E293B]">
       <NavLink
         to="/"
         className={({ isActive }) =>

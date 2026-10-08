@@ -46,7 +46,7 @@ export const Categories = ({ products, isLoading, addToCart }) => {
         description="Browse products by clothing, sports, and home appliance categories."
       />
       <Header2 heading="Categories" />
-      <main className="min-h-screen bg-white px-4 pb-24 pt-24 text-[#1E293B]">
+      <main className="categories-page min-h-screen bg-white px-4 pb-24 pt-24 text-[#1E293B]">
         <div className="mx-auto max-w-5xl space-y-8">
           {categoryNames.map((categoryName) => {
             const categoryProducts = availableProducts.filter(
@@ -60,7 +60,7 @@ export const Categories = ({ products, isLoading, addToCart }) => {
             return (
               <section key={categoryName}>
                 <h2 className="mb-3 text-lg font-bold">{categoryName}</h2>
-                <div className="grid auto-cols-38 grid-flow-col grid-rows-2 gap-3 overflow-x-auto overflow-y-hidden pb-2 md:auto-cols-44">
+                <div className="category-grid grid auto-cols-38 grid-flow-col grid-rows-2 gap-3 overflow-x-auto overflow-y-hidden pb-2 md:auto-cols-44">
                   {categoryProducts.map((product) => (
                     <article
                       key={product.id}

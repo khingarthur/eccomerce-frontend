@@ -239,7 +239,7 @@ export const Checkout = ({
           </h3>
         </div>
 
-        <main className="min-h-screen mt-20 container mx-auto px-5">
+        <main className="checkout-main min-h-screen mt-20 container mx-auto px-5">
           <h1 className="mb-4 text-2xl font-bold tracking-tight">
             Review your order
           </h1>
@@ -273,9 +273,9 @@ export const Checkout = ({
             </section>
           )}
 
-          <div className="flex flex-col gap-4">
+          <div className="checkout-grid flex flex-col gap-4">
             {/* left */}
-            <div className="flex flex-col gap-4 bg-[#F4F7F9] shadow-md rounded-xl px-4 py-4 border border-[#DCE8EA]">
+            <div className="cart-items flex flex-col gap-4 bg-[#F4F7F9] shadow-md rounded-xl px-4 py-4 border border-[#DCE8EA]">
               {selectedDeliveryOption &&
                 cart.map((cartItem) => {
                   return (
@@ -388,7 +388,7 @@ export const Checkout = ({
 
             {/* right Payment Summary */}
             {paymentSummary && (
-              <div className="max-w-90 rounded-xl border border-slate-200 bg-white px-4 py-5 shadow-sm">
+              <div className="payment-summary max-w-90 rounded-xl border border-slate-200 bg-white px-4 py-5 shadow-sm">
                 <h3 className="text-base font-semibold tracking-tight text-slate-900">
                   Payment summary
                 </h3>

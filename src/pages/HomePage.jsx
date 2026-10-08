@@ -35,7 +35,7 @@ export const HomePage = ({ products, isLoading, addToCart }) => {
         selectedCategory={selectedCategory}
         onCategorySelect={setSelectedCategory}
       />
-      <main className="font-manrope mt-28 grid grid-cols-2 md:grid-cols-4 gap-3 bg-white text-[#1E293B] w-full min-h-screen mb-25 px-2 md:px-10">
+      <main className="products-grid font-manrope mt-28 grid grid-cols-2 md:grid-cols-4 gap-3 bg-white text-[#1E293B] w-full min-h-screen mb-25 px-2 md:px-10">
         {visibleProducts.map((product) => {
           return (
             <Product key={product.id} product={product} addToCart={addToCart} />
